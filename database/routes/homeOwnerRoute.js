@@ -7,7 +7,7 @@ const { register, login, getOneOwnerByPhoneNumber, getHomeOwnerById, getAllOwner
 
 
 
-router.get('/all',getAllOwners);
+router.get('/',getAllOwners);
 router.get('/:id',getHomeOwnerById);
 router.post('/register',register);
 router.post('/login',login);

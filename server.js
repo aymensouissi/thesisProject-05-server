@@ -3,6 +3,8 @@ const app= express();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const connection = require('./database/index');
+// load env variables
+require('dotenv').config()
 
 
 
@@ -24,7 +26,7 @@ app.use('/owner', ownerRoute)
 app.use('/uni',uniRoute)
 app.use('/res',residenceRoute)
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3600;
 app.listen(port,(err)=>{
     if(err){
         console.log(err);
